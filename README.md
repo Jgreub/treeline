@@ -1,4 +1,4 @@
-### Treeline
+# Treeline
 
 An application that allows for the tracking of decisions and events of a project in a historical lineage display.
 
