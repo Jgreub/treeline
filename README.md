@@ -5,6 +5,7 @@ An application that allows for the tracking of decisions and events of a project
 ## Dependencies
 
 * Postgres Database
+* Node Package Manager (NPM)
 
 ## Running the server locally
 

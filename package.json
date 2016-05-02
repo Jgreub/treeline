@@ -1,0 +1,19 @@
+{
+  "name": "treeline",
+  "version": "0.0.1",
+  "description": "Project decision and event history lineage viewer",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jgreub/treeline.git"
+  },
+  "author": "Joe Greubel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jgreub/treeline/issues"
+  },
+  "homepage": "https://github.com/Jgreub/treeline#readme",
+  "dependencies": {
+    "angular": "1.5.x",
+  }
+}
