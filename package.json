@@ -3,17 +3,24 @@
   "version": "0.0.1",
   "description": "Project decision and event history lineage viewer",
   "main": "index.js",
+  "scripts": {
+    "build": "grunt build"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Jgreub/treeline.git"
   },
   "author": "Joe Greubel",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Jgreub/treeline/issues"
   },
   "homepage": "https://github.com/Jgreub/treeline#readme",
   "dependencies": {
-    "angular": "1.5.x",
+    "angular": "1.5.x"
+  },
+  "devDependencies": {
+    "grunt": "1.0.x",
+    "grunt-contrib-uglify": "1.0.x"
   }
 }
