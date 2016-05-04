@@ -13,4 +13,9 @@ An application that allows for the tracking of decisions and events of a project
 * Run `npm install` to download the npm dependencies into the *node_modules* directory
 * Run `npm run build` to bundle the javascript files into the *resources/static/built* directory
 * Start the the spring boot server by executing the maven task `spring-boot:run`
-* Visit the website at localhost:8080
+* Visit the website at localhost:8080\
+
+Extra development tools:
+
+* Run `npm run watch` to automatically compile javascript and css changes after saving
+* Have the *LiveReload* plugin running on your browser to automatically refresh the page when making the project with `cmd+F9`
