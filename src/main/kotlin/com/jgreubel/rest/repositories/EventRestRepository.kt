@@ -4,5 +4,5 @@ import com.jgreubel.domain.entities.Event
 import org.springframework.data.repository.PagingAndSortingRepository
 import org.springframework.data.rest.core.annotation.RepositoryRestResource
 
-@RepositoryRestResource(path = "event", collectionResourceRel = "events")
+@RepositoryRestResource(path = "events", collectionResourceRel = "events")
 interface EventRestRepository : PagingAndSortingRepository<Event, Long>
