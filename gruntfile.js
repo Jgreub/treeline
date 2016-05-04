@@ -1,4 +1,5 @@
 module.exports = function (grunt) {
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
     grunt.initConfig({
@@ -30,7 +31,13 @@ module.exports = function (grunt) {
                 ],
                 dest: '<%= BuiltDir %>/dependencies.min.js'
             }
-        }
+        },
+        watch: {
+           js: {
+               files: ['<%= TreelineJs %>'],
+               tasks: ['uglify:treeline']
+           }
+       }
     });
 
     // **************************** //

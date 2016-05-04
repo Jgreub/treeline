@@ -4,7 +4,8 @@
   "description": "Project decision and event history lineage viewer",
   "main": "index.js",
   "scripts": {
-    "build": "grunt build"
+    "build": "grunt build",
+    "watch": "grunt watch"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "grunt": "1.0.x",
-    "grunt-contrib-uglify": "1.0.x"
+    "grunt-contrib-uglify": "1.0.x",
+    "grunt-contrib-watch": "1.0.x"
   }
 }
