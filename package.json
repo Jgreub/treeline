@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "grunt build",
+    "test-jsu": "karma start karma.conf.js",
     "watch": "grunt watch"
   },
   "repository": {
@@ -21,8 +22,15 @@
     "angular": "1.5.x"
   },
   "devDependencies": {
+    "angular-mocks": "1.5.x",
     "grunt": "1.0.x",
     "grunt-contrib-uglify": "1.0.x",
-    "grunt-contrib-watch": "1.0.x"
+    "grunt-contrib-watch": "1.0.x",
+    "jasmine-core": "2.4.x",
+    "karma": "0.13.x",
+    "karma-chrome-launcher": "1.0.x",
+    "karma-jasmine": "1.0.x",
+    "karma-phantomjs-launcher": "1.0.x",
+    "phantomjs-prebuilt": "2.1.x"
   }
 }
