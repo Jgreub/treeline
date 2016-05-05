@@ -9,12 +9,12 @@ app.controller('projectController', ['$http', function($http) {
 }])
 
 app.component('project', {
-    template: '<event ng-repeat="event in $ctrl.events" event="event"></event>',
+    templateUrl: '/templates/project.html',
     controller: 'projectController'
 })
 
 app.component('event', {
-    template: '<div>{{$ctrl.event.description}}</div>',
+    templateUrl: '/templates/event.html',
     bindings: {
         event: '<'
     }
