@@ -8,6 +8,7 @@ module.exports = function (grunt) {
         //  Grunt Variables  //
         // ***************** //
 
+        TreeLineJsModule: 'src/main/js/treeline.js',
         TreelineJs: 'src/main/js/**/*.js',
         BuiltDir: 'src/main/resources/static/built',
 
@@ -18,6 +19,7 @@ module.exports = function (grunt) {
         uglify: {
             treeline: {
                 src: [
+                    '<%= TreeLineJsModule %>',
                     '<%= TreelineJs %>'
                 ],
                 dest: '<%= BuiltDir %>/treeline.min.js'

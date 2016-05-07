@@ -4,6 +4,7 @@ module.exports = function(config) {
     files: [
       'node_modules/angular/angular.min.js',
       'node_modules/angular-mocks/angular-mocks.js',
+      'src/main/js/treeline.js',
       'src/main/js/**/*.js',
       'src/test/js/**/*.js'
     ],

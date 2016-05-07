@@ -2,7 +2,7 @@
   "name": "treeline",
   "version": "0.0.1",
   "description": "Project decision and event history lineage viewer",
-  "main": "index.js",
+  "main": "treeline.js",
   "scripts": {
     "build": "grunt build",
     "test-jsu": "karma start karma.conf.js",
