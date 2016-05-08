@@ -1,10 +1,10 @@
 function spyOnAndReturnPromise(component, functionName) {
     function Promise() {
-        var _fulfillCallback
+        var _resolveCallback
         var _rejectCallback
 
         function resolve(data) {
-            _fulfillCallback(data)
+            _resolveCallback(data)
         }
 
         function reject(data) {
@@ -12,8 +12,8 @@ function spyOnAndReturnPromise(component, functionName) {
         }
 
         var future = {
-            then: function(fulfillCallback, rejectCallback) {
-                _fulfillCallback = fulfillCallback
+            then: function(resolveCallback, rejectCallback) {
+                _resolveCallback = resolveCallback
                 _rejectCallback = rejectCallback
             }
         }
