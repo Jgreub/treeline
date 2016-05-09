@@ -1,10 +1,12 @@
 {
   "name": "treeline",
   "version": "0.0.1",
-  "description": "Project decision and event history lineage viewer",
+  "description": "Project event history lineage viewer",
   "main": "treeline.js",
   "scripts": {
     "build": "grunt build",
+    "pretest-e2e": "webdriver-manager update",
+    "test-e2e": "protractor protractor.conf.js",
     "test-jsu": "karma start karma.conf.js",
     "watch": "grunt watch"
   },
@@ -31,6 +33,7 @@
     "karma-chrome-launcher": "1.0.x",
     "karma-jasmine": "1.0.x",
     "karma-phantomjs-launcher": "1.0.x",
-    "phantomjs-prebuilt": "2.1.x"
+    "phantomjs-prebuilt": "2.1.x",
+    "protractor": "3.3.x"
   }
 }
