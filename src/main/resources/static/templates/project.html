@@ -1,1 +1,5 @@
 <event ng-repeat="event in $ctrl.events" event="event"></event>
+<form>
+    <input id="addEventTextField" type="text" ng-model="$ctrl.newEventText"/>
+    <input id="addEventSubmitButton" type="submit" ng-click="$ctrl.addEvent()"/>
+</form>
