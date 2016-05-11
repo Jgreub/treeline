@@ -2,8 +2,9 @@ describe('Project Controller', function() {
 
     beforeEach(module('treeline'))
 
-    beforeEach(inject(function($controller, $http) {
+    beforeEach(inject(function($controller, $http, $rootScope) {
         this.$http = $http
+        this.$rootScope = $rootScope
 
         this.getEventsPromise = spyOnAndReturnPromise(this.$http, 'get')
 
@@ -20,6 +21,7 @@ describe('Project Controller', function() {
 
         beforeEach(function() {
             this.getEventsPromise.resolve(getEventsResponse)
+            this.$rootScope.$apply()
         })
 
         it('should expose the returned events', function() {
@@ -47,6 +49,7 @@ describe('Project Controller', function() {
 
             beforeEach(function() {
                 this.saveEventPromise.resolve(saveEventResponse)
+                this.$rootScope.$apply()
             })
 
             it('should add the saved event to the exposed events', function() {

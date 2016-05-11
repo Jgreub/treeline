@@ -1,31 +1,10 @@
 function spyOnAndReturnPromise(component, functionName) {
-    function Promise() {
-        var _resolveCallback
-        var _rejectCallback
+    var deferred
 
-        function resolve(data) {
-            _resolveCallback(data)
-        }
+    inject(function($q) {
+        deferred = $q.defer()
+    })
 
-        function reject(data) {
-            _rejectCallback(data)
-        }
-
-        var future = {
-            then: function(resolveCallback, rejectCallback) {
-                _resolveCallback = resolveCallback
-                _rejectCallback = rejectCallback
-            }
-        }
-
-        return {
-            resolve: resolve,
-            reject: reject,
-            future: future
-        }
-    }
-
-    var promise = Promise()
-    spyOn(component, functionName).and.returnValue(promise.future)
-    return promise
+    spyOn(component, functionName).and.returnValue(deferred.promise)
+    return deferred
 }
