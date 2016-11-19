@@ -1,4 +1,10 @@
+var TestEndpointsHelper = require('./support/Helpers.js')
+
 describe('EventsTest', function() {
+
+    beforeAll(function(done) {
+        TestEndpointsHelper.resetTestDB(done)
+    })
 
     it('I can view all events', iCanViewAllEvents)
     it('I can add an event', iCanAddAnEvent)
@@ -20,7 +26,7 @@ describe('EventsTest', function() {
     }
 
     function iSeeAllEvents() {
-        expect(element.all(by.css('event')).count()).toBeGreaterThan(0)
+        expect(element.all(by.css('event')).count()).toEqual(3)
     }
 
     function iAddAnEvent() {
@@ -29,6 +35,7 @@ describe('EventsTest', function() {
     }
 
     function iSeeTheNewEvent() {
-        expect(element(by.css('event:last-of-type')).getText()).toEqual('The cake is a lie.')
+        expect(element.all(by.css('event')).count()).toEqual(4)
+        expect(element(by.css('event:nth-child(4)')).getText()).toEqual('The cake is a lie.')
     }
 });
