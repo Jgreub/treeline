@@ -26,7 +26,7 @@ open class TestEndpoints @Autowired constructor(val eventRestRepository: EventRe
         val events = listOf(
             Event(1, "Earth has been born"),
             Event(2, "Cheese is invented"),
-            Event(3, "Al humans have died")
+            Event(3, "All humans have died")
         )
 
         eventRestRepository.save(events)

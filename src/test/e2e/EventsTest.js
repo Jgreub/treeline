@@ -1,4 +1,5 @@
-var TestEndpointsHelper = require('./support/Helpers.js')
+var TestEndpointsHelper = require('./support/TestEndpointsHelpers.js')
+var EventsPage = require('./pages/EventsPage.js')
 
 describe('EventsTest', function() {
 
@@ -8,6 +9,8 @@ describe('EventsTest', function() {
 
     it('I can view all events', iCanViewAllEvents)
     it('I can add an event', iCanAddAnEvent)
+
+    // *** Steps *** //
 
     function iCanViewAllEvents() {
         iGoToTheWebsite()
@@ -22,20 +25,22 @@ describe('EventsTest', function() {
     // *** Helper Functions *** //
 
     function iGoToTheWebsite() {
-        browser.get('index.html')
+        browser.get('/')
     }
 
     function iSeeAllEvents() {
-        expect(element.all(by.css('event')).count()).toEqual(3)
+        expect(EventsPage.numberOfEvents()).toEqual(3)
+        expect(EventsPage.eventDescriptionAtIndex(1)).toEqual('Earth has been born')
+        expect(EventsPage.eventDescriptionAtIndex(2)).toEqual('Cheese is invented')
+        expect(EventsPage.eventDescriptionAtIndex(3)).toEqual('All humans have died')
     }
 
     function iAddAnEvent() {
-        element(by.id('addEventTextField')).sendKeys('The cake is a lie.')
-        element(by.id('addEventSubmitButton')).click()
+        EventsPage.addEventWithDescription('The cake is a lie')
     }
 
     function iSeeTheNewEvent() {
-        expect(element.all(by.css('event')).count()).toEqual(4)
-        expect(element(by.css('event:nth-child(4)')).getText()).toEqual('The cake is a lie.')
+        expect(EventsPage.numberOfEvents()).toEqual(4)
+        expect(EventsPage.eventDescriptionAtIndex(4)).toEqual('The cake is a lie')
     }
 });
