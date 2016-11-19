@@ -30,9 +30,9 @@ describe('EventsTest', function() {
 
     function iSeeAllEvents() {
         expect(EventsPage.numberOfEvents()).toEqual(3)
-        expect(EventsPage.eventDescriptionAtIndex(1)).toEqual('Earth has been born')
-        expect(EventsPage.eventDescriptionAtIndex(2)).toEqual('Cheese is invented')
-        expect(EventsPage.eventDescriptionAtIndex(3)).toEqual('All humans have died')
+        expect(EventsPage.eventDescriptionAtIndex(0)).toEqual('Earth has been born')
+        expect(EventsPage.eventDescriptionAtIndex(1)).toEqual('Cheese is invented')
+        expect(EventsPage.eventDescriptionAtIndex(2)).toEqual('All humans have died')
     }
 
     function iAddAnEvent() {
@@ -41,6 +41,6 @@ describe('EventsTest', function() {
 
     function iSeeTheNewEvent() {
         expect(EventsPage.numberOfEvents()).toEqual(4)
-        expect(EventsPage.eventDescriptionAtIndex(4)).toEqual('The cake is a lie')
+        expect(EventsPage.eventDescriptionAtIndex(3)).toEqual('The cake is a lie')
     }
 });

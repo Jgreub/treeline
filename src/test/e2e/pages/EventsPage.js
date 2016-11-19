@@ -2,12 +2,12 @@ var EventsPage = function() {
 
     // *** Elements *** //
 
-    var eventAtIndex = function(index) {
-        return element(by.css('event:nth-child(' + index + ')'))
-    }
-
     var allEvents = function() {
         return element.all(by.css('event'))
+    }
+
+    var eventAtIndex = function(index) {
+        return allEvents().get(index)
     }
 
     var addEventDescriptionTextField = function() {
