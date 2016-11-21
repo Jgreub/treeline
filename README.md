@@ -4,8 +4,10 @@ An application that allows for the tracking of events relative to a project in a
 
 ### Dependencies
 
+* Java
 * Postgres Database
 * Node Package Manager (NPM)
+* Sass
 
 ### Running the server locally
 
@@ -13,7 +15,7 @@ An application that allows for the tracking of events relative to a project in a
 * Run `npm install` to download the npm dependencies into the *node_modules* directory
 * Run `npm run build` to bundle the javascript files into the *resources/static/built* directory
 * Start the the spring boot server by executing the maven task `spring-boot:run`
-* Visit the website at localhost:8080\
+* Visit the website at **localhost:8080**
 
 ##### Extra development tools:
 

@@ -21,11 +21,13 @@
   },
   "homepage": "https://github.com/Jgreub/treeline#readme",
   "dependencies": {
-    "angular": "1.5.x"
+    "angular": "1.5.x",
+    "bootstrap": "3.3.x"
   },
   "devDependencies": {
     "angular-mocks": "1.5.x",
     "grunt": "1.0.x",
+    "grunt-contrib-sass": "1.0.x",
     "grunt-contrib-uglify": "2.0.x",
     "grunt-contrib-watch": "1.0.x",
     "jasmine-core": "2.5.x",
@@ -35,6 +37,6 @@
     "karma-phantomjs-launcher": "1.0.x",
     "phantomjs-prebuilt": "2.1.x",
     "protractor": "4.0.x",
-    "request": "^2.79.x"
+    "request": "2.79.x"
   }
 }
