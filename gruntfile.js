@@ -9,7 +9,7 @@ module.exports = function (grunt) {
         //  Grunt Variables  //
         // ***************** //
 
-        TreelineJsModule: 'src/main/js/treeline.js',
+        TreelineJsMain: 'src/main/js/treeline.js',
         TreelineJs: 'src/main/js/**/*.js',
         TreelineSassMain: 'src/main/resources/static/styles/treeline.scss',
         TreelineSass: 'src/main/resources/static/styles/**/*.scss',
@@ -22,7 +22,7 @@ module.exports = function (grunt) {
         uglify: {
             treeline: {
                 src: [
-                    '<%= TreelineJsModule %>',
+                    '<%= TreelineJsMain %>',
                     '<%= TreelineJs %>'
                 ],
                 dest: '<%= BuiltDir %>/treeline.min.js'
