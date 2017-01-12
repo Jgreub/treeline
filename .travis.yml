@@ -1,0 +1,16 @@
+language: java
+
+services:
+  - postgresql
+
+addons:
+  postgresql: "9.5"
+
+install:
+  - npm install
+
+before_script:
+  - psql -c 'create database treeline-test;' -U postgres
+
+script:
+  - npm run test-jsu
