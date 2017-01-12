@@ -1,5 +1,8 @@
 language: java
 
+node_js:
+  - "4.3"
+
 services:
   - postgresql
 
