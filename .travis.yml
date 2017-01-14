@@ -1,13 +1,12 @@
 language: java
-
-node_js:
-  - "4.3"
+jdk:
+  - oraclejdk8
 
 services:
   - postgresql
 
 addons:
-  postgresql: "9.5"
+  postgresql: "9.6"
 
 install:
   - npm install

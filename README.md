@@ -1,6 +1,6 @@
 # Treeline
 
-An application that allows for the tracking of events relative to a project in a historical lineage display.
+An application that allows for the tracking of events relative to a project in a historical lineage display
 
 ### Dependencies
 
@@ -17,7 +17,7 @@ An application that allows for the tracking of events relative to a project in a
 * Start the the spring boot server by executing the maven task `spring-boot:run`
 * Visit the website at **localhost:8080**
 
-##### Extra development tools:
+##### Extra development tools
 
 * Run `npm run watch` to automatically compile javascript and css changes after saving
 * Have the *LiveReload* plugin running on your browser to automatically refresh the page when making the project with `cmd+F9`
