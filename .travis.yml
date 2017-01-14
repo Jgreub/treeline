@@ -1,3 +1,5 @@
+dist: trusty
+
 language: java
 jdk:
   - oraclejdk8
@@ -13,6 +15,8 @@ install:
 
 before_script:
   - psql -c 'create database treeline-test;' -U postgres
+  - ./mvnw spring-boot:run -Drun.profiles=test
 
 script:
   - npm run test-jsu
+  - npm run test-e2e
