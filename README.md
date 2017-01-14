@@ -1,4 +1,4 @@
-# Treeline
+# Treeline [![Build Status](https://travis-ci.org/jgreub/treeline.svg?branch=master)](https://travis-ci.org/jgreub/treeline)
 
 An application that allows for the tracking of events relative to a project in a historical lineage display
 
