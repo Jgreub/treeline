@@ -1,5 +1,5 @@
 exports.config = {
-  allScriptsTimeout: 2 * 1000,
+  allScriptsTimeout: 30 * 1000,
 
   specs: [
     'src/test/e2e/support/*.js',
