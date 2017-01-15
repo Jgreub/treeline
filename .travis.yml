@@ -18,7 +18,7 @@ before_script:
   - sh -e /etc/init.d/xvfb start
   - psql -c 'create database "treeline-test";' -U postgres
   - ./mvnw spring-boot:run -Drun.profiles=test &
-  - sleep 3
+  - sleep 180
 
 script:
   - npm run test-jsu
