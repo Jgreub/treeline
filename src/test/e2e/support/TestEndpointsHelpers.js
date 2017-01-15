@@ -1,10 +1,8 @@
 var request = require('request')
 
 var TestEndpointsHelper = function() {
-    var TestServerBaseURL = 'http://localhost:8081'
-
     function resetTestDB(done) {
-        request.post(TestServerBaseURL + '/test/resetTestDB', function() { done() })
+        request.post(browser.baseUrl + '/test/resetTestDB', done)
     }
 
     return {
