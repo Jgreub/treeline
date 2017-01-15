@@ -14,7 +14,7 @@ install:
   - npm install
 
 before_script:
-  - psql -c 'create database treeline-test;' -U postgres
+  - psql -c 'create database "treeline-test";' -U postgres
   - ./mvnw spring-boot:run -Drun.profiles=test
 
 script:
