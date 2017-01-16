@@ -16,6 +16,9 @@ addons:
       packages:
         - google-chrome-stable
 
+before_install:
+  - npm i -g npm
+
 install:
   - npm install
 
