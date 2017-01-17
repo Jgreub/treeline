@@ -26,6 +26,7 @@ describe('EventsTest', function() {
 
     function iGoToTheWebsite() {
         browser.get('/')
+        console.log('browser: ', browser);
     }
 
     function iSeeAllEvents() {
