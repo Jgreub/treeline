@@ -27,8 +27,9 @@ describe('EventsTest', function() {
     function iGoToTheWebsite() {
         browser.get('/')
         console.log('browser: ', browser);
-        console.log(browser.diver.find(by.css('.container')))
-        console.log(browser.diver.find(by.css('.container')).getText())
+        browser.element(by.css('.container')).getText().then(function (text) { console.log('text: \n', text) })
+        browser.element(by.css('.container')).getOuterHtml().then(function (outer) { console.log('outer: \n', outer) })
+        browser.element(by.css('.container')).getInnerHtml().then(function (inner) { console.log('inner: \n', inner) })
     }
 
     function iSeeAllEvents() {
