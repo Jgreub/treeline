@@ -14,8 +14,11 @@ open class TestEndpoints @Autowired constructor(val eventRestRepository: EventRe
 
     @RequestMapping("/test/resetTestDB", method = arrayOf(RequestMethod.POST))
     fun resetTestDB() {
+        println("Someone called the reset database endpoint!!!")
         removeAllDataFromDB()
+        println("Remove all done!")
         insertDefaultTestSeedData()
+        println("Finished!!")
     }
 
     private fun removeAllDataFromDB() {
