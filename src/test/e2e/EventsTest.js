@@ -27,6 +27,7 @@ describe('EventsTest', function() {
     function iGoToTheWebsite() {
         browser.get('/')
         console.log('browser: ', browser);
+        browser.driver.findElement(by.tagName('html')).getInnerHtml().then(function (inner) { console.log('inner of html: \n', inner) })
         browser.driver.findElement(by.css('.container')).getText().then(function (text) { console.log('text: \n', text) })
         browser.driver.findElement(by.css('.container')).getOuterHtml().then(function (outer) { console.log('outer: \n', outer) })
         browser.driver.findElement(by.css('.container')).getInnerHtml().then(function (inner) { console.log('inner: \n', inner) })
