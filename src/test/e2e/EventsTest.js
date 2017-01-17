@@ -27,6 +27,8 @@ describe('EventsTest', function() {
     function iGoToTheWebsite() {
         browser.get('/')
         console.log('browser: ', browser);
+        console.log(browser.diver.find(by.css('.container')))
+        console.log(browser.diver.find(by.css('.container')).getText())
     }
 
     function iSeeAllEvents() {

@@ -11,8 +11,6 @@ addons:
   postgresql: "9.6"
 
 install:
-  - which google-chrome
-  - google-chrome --version
   - npm install
 
 before_script:
