@@ -43,4 +43,4 @@ describe('EventsTest', function() {
         expect(EventsPage.numberOfEvents()).toEqual(4)
         expect(EventsPage.eventDescriptionAtIndex(3)).toEqual('The cake is a lie')
     }
-});
+})

@@ -1,7 +1,7 @@
 module.exports = function (grunt) {
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-watch')
+    grunt.loadNpmTasks('grunt-contrib-sass')
+    grunt.loadNpmTasks('grunt-contrib-uglify')
 
     grunt.initConfig({
 
@@ -69,11 +69,11 @@ module.exports = function (grunt) {
                tasks: ['sass:treeline']
            }
        }
-    });
+    })
 
     // **************************** //
     //    Grunt Registered Tasks    //
     // **************************** //
 
-    grunt.registerTask('build', ['uglify:treeline', 'uglify:dependencies', 'sass:treeline', 'sass:dependencies']);
-};
+    grunt.registerTask('build', ['uglify:treeline', 'uglify:dependencies', 'sass:treeline', 'sass:dependencies'])
+}

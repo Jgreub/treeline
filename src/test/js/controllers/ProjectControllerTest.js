@@ -9,11 +9,11 @@ describe('Project Controller', function() {
         this.getEventsPromise = spyOnAndReturnPromise(this.$http, 'get')
 
         this.controller = $controller('ProjectController', { $http: this.$http })
-    }));
+    }))
 
     it('should fetch the events', function() {
         expect(this.$http.get).toHaveBeenCalledWith('/api/events')
-    });
+    })
 
     describe('when the get events promise is fulfilled', function() {
         var events = [{description: "Event!"}, {description: "Event Two!"}]
@@ -57,4 +57,4 @@ describe('Project Controller', function() {
             })
         })
     })
-});
+})
