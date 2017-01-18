@@ -26,7 +26,6 @@ describe('EventsTest', function() {
 
     function iGoToTheWebsite() {
         browser.get('/')
-        browser.driver.findElement(by.tagName('html')).getOuterHtml().then(function (html) { console.log('html: \n', html) })
     }
 
     function iSeeAllEvents() {

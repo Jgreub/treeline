@@ -17,6 +17,7 @@ before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
   - psql -c 'create database "treeline-test";' -U postgres
+  - npm run build
   - ./mvnw spring-boot:run -Drun.profiles=test &
   - sleep 240
 
