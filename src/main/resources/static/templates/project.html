@@ -1,7 +1,13 @@
-<event data-ng-repeat="event in $ctrl.events" event="event"></event>
-<form class="input-group">
-    <input id="addEventTextField" class="form-control" type="text" data-ng-model="$ctrl.newEventText"/>
-    <div class="input-group-btn">
-        <input id="addEventSubmitButton" class="btn btn-primary" type="submit" data-ng-click="$ctrl.addEvent()"/>
-    </div>
-</form>
+<div class="row">
+    <event class="col-md-6" data-ng-class="$index%2==1 ? 'col-md-offset-6' : ''" data-ng-repeat="event in $ctrl.events" event="event"></event>
+</div>
+<div class="row">
+    <form class="col-md-12">
+        <div class="input-group">
+            <input id="addEventTextField" class="form-control" type="text" data-ng-model="$ctrl.newEventText"/>
+            <div class="input-group-btn">
+                <input id="addEventSubmitButton" class="btn btn-primary" type="submit" data-ng-click="$ctrl.addEvent()"/>
+            </div>
+        </div>
+    </form>
+</div>
