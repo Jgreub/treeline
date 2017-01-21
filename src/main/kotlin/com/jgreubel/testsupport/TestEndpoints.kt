@@ -1,7 +1,7 @@
-package com.jgreubel.test_support
+package com.jgreubel.testsupport
 
-import com.jgreubel.domain.entities.Event
-import com.jgreubel.rest.repositories.EventRestRepository
+import com.jgreubel.events.Event
+import com.jgreubel.events.EventRestRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Profile
 import org.springframework.web.bind.annotation.RequestMapping

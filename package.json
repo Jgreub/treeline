@@ -2,7 +2,7 @@
   "name": "treeline",
   "version": "0.0.1",
   "description": "Project event history lineage viewer",
-  "main": "treeline.js",
+  "main": "webapp/main/Treeline.js",
   "scripts": {
     "build": "grunt build",
     "pretest-e2e": "webdriver-manager update",
@@ -27,6 +27,8 @@
   "devDependencies": {
     "angular-mocks": "1.6.x",
     "grunt": "1.0.x",
+    "grunt-contrib-clean": "1.0.x",
+    "grunt-contrib-copy": "1.0.x",
     "grunt-contrib-sass": "1.0.x",
     "grunt-contrib-uglify": "2.0.x",
     "grunt-contrib-watch": "1.0.x",

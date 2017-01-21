@@ -1,4 +1,4 @@
-angular.module('treeline').controller('ProjectController', ['$http', function($http) {
+angular.module('events').controller('ProjectController', ['$http', function($http) {
     var $ctrl = this
 
     $ctrl.events = []

@@ -1,4 +1,4 @@
-package com.jgreubel.domain.entities
+package com.jgreubel.events
 
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue

@@ -4,4 +4,4 @@
 target
 node_modules
 npm-debug.log
-src/main/resources/static/built
+src/main/resources/static/
