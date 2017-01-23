@@ -1,9 +1,7 @@
-project {
-    display: block;
-    padding: 15px;
-    background-color: ghostwhite;
-}
+// Vendor
+@import 'vendor/bootstrap-variable-overrides';
+@import 'bootstrap';
 
-event {
-    display: block;
-}
+// Treeline
+@import 'events/event';
+@import 'projects/project';

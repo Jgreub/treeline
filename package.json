@@ -22,7 +22,7 @@
   "homepage": "https://github.com/Jgreub/treeline#readme",
   "dependencies": {
     "angular": "1.6.x",
-    "bootstrap": "3.3.x"
+    "bootstrap-sass": "3.3.x"
   },
   "devDependencies": {
     "angular-mocks": "1.6.x",

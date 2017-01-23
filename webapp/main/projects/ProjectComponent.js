@@ -1,4 +1,4 @@
 angular.module('events').component('project', {
-    templateUrl: '/templates/events/project.html',
+    templateUrl: '/templates/projects/project.html',
     controller: 'ProjectController'
 })

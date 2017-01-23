@@ -70,20 +70,11 @@ module.exports = function (grunt) {
                 options: {
                     noCache: true,
                     style: 'compact',
-                    sourcemap: 'none'
+                    sourcemap: 'none',
+                    loadPath: 'node_modules/bootstrap-sass/assets/stylesheets'
                 },
                 files: {
                     '<%= BuiltDir %>/treeline.min.css': '<%= TreelineSassMain %>'
-                }
-            },
-            dependencies: {
-                options: {
-                    noCache: true,
-                    style: 'compact',
-                    sourcemap: 'none'
-                },
-                files: {
-                    '<%= BuiltDir %>/dependencies.min.css': 'node_modules/bootstrap/dist/css/bootstrap.css'
                 }
             }
         },
@@ -107,5 +98,5 @@ module.exports = function (grunt) {
     //    Grunt Registered Tasks    //
     // **************************** //
 
-    grunt.registerTask('build', ['clean:static', 'uglify:treeline', 'uglify:dependencies', 'copy:index', 'copy:html', 'sass:treeline', 'sass:dependencies'])
+    grunt.registerTask('build', ['clean:static', 'uglify:treeline', 'uglify:dependencies', 'copy:index', 'copy:html', 'sass:treeline'])
 }
