@@ -20,8 +20,12 @@ var EventsPage = function() {
 
     // *** Properties *** //
 
+    var eventCreatedTimeAtIndex = function(index) {
+        return eventAtIndex(index).element(by.css('.created-time')).getText();
+    }
+
     var eventDescriptionAtIndex = function(index) {
-        return eventAtIndex(index).getText()
+        return eventAtIndex(index).element(by.css('.description')).getText()
     }
 
     var numberOfEvents = function() {
@@ -38,6 +42,7 @@ var EventsPage = function() {
     // *** Public Functions *** //
 
     return {
+        eventCreatedTimeAtIndex: eventCreatedTimeAtIndex,
         eventDescriptionAtIndex: eventDescriptionAtIndex,
         numberOfEvents: numberOfEvents,
         addEventWithDescription: addEventWithDescription

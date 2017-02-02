@@ -16,7 +16,11 @@ describe('Project Controller', function() {
     })
 
     describe('when fetching the events succeeds', function() {
-        var getEventsResponse = {data: {_embedded: {events: [{description: 'event-one'}, {description: 'event-two'}]}}}
+        var events = [
+            {description: 'event-one', createdDate: '2013-02-08T09:30:26.123'},
+            {description: 'event-two', createdDate: '2014-11-24T11:30:27.443'}
+        ]
+        var getEventsResponse = {data: {_embedded: {events: events}}}
 
         beforeEach(function() {
             this.getEventsPromise.resolve(getEventsResponse)
@@ -24,13 +28,17 @@ describe('Project Controller', function() {
         })
 
         it('exposes the returned events', function() {
-            expect(this.controller.events).toEqual([{description: 'event-one'}, {description: 'event-two'}])
+            var expectedEvents = [
+                {description: 'event-one', createdDate: '2013-02-08T09:30:26.123'},
+                {description: 'event-two', createdDate: '2014-11-24T11:30:27.443'}
+            ]
+            expect(this.controller.events).toEqual(expectedEvents)
         })
     })
 
     describe('#addEvent', function() {
         beforeEach(function() {
-            this.controller.events = [{description: 'existing-event'}]
+            this.controller.events = [{description: 'existing-event', createdDate: '2013-02-08T09:30:26.123'}]
             this.saveEventPromise = spyOnAndReturnPromise(this.$http, 'post')
 
             this.controller.newEventText = 'new-event'
@@ -42,7 +50,7 @@ describe('Project Controller', function() {
         })
 
         describe('when saving the event succeeds', function() {
-            var saveEventResponse = {data: {description: 'new-event-from-server'}}
+            var saveEventResponse = {data: {description: 'new-event-from-server', createdDate: '2014-11-24T11:30:27.443'}}
 
             beforeEach(function() {
                 this.saveEventPromise.resolve(saveEventResponse)
@@ -50,7 +58,11 @@ describe('Project Controller', function() {
             })
 
             it('adds the saved event to the exposed events', function() {
-                expect(this.controller.events).toEqual([{description: 'existing-event'}, {description: 'new-event-from-server'}])
+                var expectedEvents = [
+                    {description: 'existing-event', createdDate: '2013-02-08T09:30:26.123'},
+                    {description: 'new-event-from-server', createdDate: '2014-11-24T11:30:27.443'}
+                ]
+                expect(this.controller.events).toEqual(expectedEvents)
             })
         })
     })
