@@ -6,7 +6,9 @@ An application that allows for the tracking of events relative to a project in a
 
 * Java *(jdk8)*
 * Postgres Database *(v9.6)*
-* Node Package Manager *(v4.1)*
+* NodeJS *(v6.10)*
+* Node Package Manager *(v4.4)*
+* Ruby *(v2.4)*
 * Sass Ruby Gem *(v3.4)*
 
 ### Running the server locally
