@@ -1,9 +1,9 @@
 module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean')
     grunt.loadNpmTasks('grunt-contrib-copy')
-    grunt.loadNpmTasks('grunt-contrib-sass')
     grunt.loadNpmTasks('grunt-contrib-uglify')
     grunt.loadNpmTasks('grunt-contrib-watch')
+    grunt.loadNpmTasks('grunt-sass')
 
     grunt.initConfig({
 
@@ -68,10 +68,9 @@ module.exports = function (grunt) {
         sass: {
             treeline: {
                 options: {
-                    noCache: true,
-                    style: 'compact',
-                    sourcemap: 'none',
-                    loadPath: 'node_modules/bootstrap-sass/assets/stylesheets'
+                    outputStyle: 'compact',
+                    sourcemap: false,
+                    includePaths: ['node_modules/bootstrap-sass/assets/stylesheets']
                 },
                 files: {
                     '<%= BuiltDir %>/treeline.min.css': '<%= TreelineSassMain %>'
