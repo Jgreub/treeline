@@ -21,7 +21,7 @@ before_script:
   - psql -c 'create database "treeline-test";' -U postgres
   - npm run build
   - ./mvnw spring-boot:run -Drun.profiles=test &
-  - sleep 240
+  - sleep 260
 
 script:
   - npm run test-jsu
