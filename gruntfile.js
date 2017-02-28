@@ -78,19 +78,19 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-           js: {
-               files: ['<%= TreelineJs %>'],
-               tasks: ['uglify:treeline']
-           },
-           html: {
-                files: ['<%= TreelineHtmlMain %>', '<%= TreelineHtml %>'],
-                tasks: ['clean:templates', 'copy:index', 'copy:html']
-           },
-           sass: {
-               files: ['<%= TreelineSass %>'],
-               tasks: ['sass:treeline']
-           }
-       }
+            js: {
+                files: ['<%= TreelineJs %>'],
+                tasks: ['uglify:treeline']
+            },
+            html: {
+                 files: ['<%= TreelineHtmlMain %>', '<%= TreelineHtml %>'],
+                 tasks: ['clean:templates', 'copy:index', 'copy:html']
+            },
+            sass: {
+                files: ['<%= TreelineSass %>'],
+                tasks: ['sass:treeline']
+            }
+        }
     })
 
     // **************************** //
