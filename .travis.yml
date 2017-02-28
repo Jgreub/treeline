@@ -12,9 +12,6 @@ addons:
 
 install:
   - npm install
-  - node -v
-  - npm -v
-  - java -version
 
 before_script:
   - export DISPLAY=:99.0
