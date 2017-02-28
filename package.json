@@ -39,7 +39,7 @@
     "karma-phantomjs-launcher": "1.0.x",
     "moment": "2.17.x",
     "phantomjs-prebuilt": "2.1.x",
-    "protractor": "4.0.x",
+    "protractor": "5.1.x",
     "request": "2.79.x"
   }
 }
