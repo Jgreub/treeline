@@ -14,6 +14,9 @@ addons:
 
 install:
   - npm install
+  - node -v
+  - npm -v
+  - java -version
 
 before_script:
   - export DISPLAY=:99.0
@@ -21,7 +24,7 @@ before_script:
   - psql -c 'create database "treeline-test";' -U postgres
   - npm run build
   - ./mvnw spring-boot:run -Drun.profiles=test &
-  - sleep 260
+  - sleep 250
 
 script:
   - npm run test-jsu
