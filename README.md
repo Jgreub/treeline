@@ -14,7 +14,7 @@ An application that allows for the tracking of events relative to a project in a
 * Create a Postgres database named **treeline** on the default port 5432
 * Run `npm install` to download the npm dependencies into the *node_modules* directory
 * Run `npm run build` to bundle the javascript, html and sass files into the *resources/static* directory
-* Start the the spring boot server by executing the maven task `spring-boot:run`
+* Start the the spring boot server by executing the gradle task `bootRun`
 * Visit the website at **localhost:8080**
 
 ##### Extra development tools
@@ -31,5 +31,5 @@ An application that allows for the tracking of events relative to a project in a
 ##### End to End Tests
 
 * Create a Postgres database named **treeline-test** on the default port 5432
-* Start the the spring boot server with the test profile by executing the maven task `spring-boot:run -Drun.profiles=test`
+* Start the the spring boot server with the test profile by executing the gradle task `bootRun -Dspring.profiles.active=test`
 * Run `npm run test-e2e` to execute the end to end tests found in *src/test/e2e*
