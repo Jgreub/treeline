@@ -18,7 +18,7 @@ before_script:
   - sh -e /etc/init.d/xvfb start
   - psql -c 'create database "treeline-test";' -U postgres
   - npm run build
-  - ./mvnw spring-boot:run -Drun.profiles=test &
+  - ./gradlew bootRun -Dspring.profiles.active=test &
   - sleep 250
 
 script:

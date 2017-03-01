@@ -1,7 +1,9 @@
 .DS_Store
 .idea
 *.iml
-target
+.gradle
+build
+out
 node_modules
 npm-debug.log
 src/main/resources/static/
