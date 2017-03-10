@@ -1,25 +1,11 @@
 {
-  "name": "treeline",
-  "version": "0.0.1",
-  "description": "Project event history lineage viewer",
-  "main": "webapp/main/Treeline.js",
   "scripts": {
     "build": "grunt build",
-    "pretest-e2e": "webdriver-manager update",
+    "pretest-e2e": "webdriver-manager update --versions.standalone=3.2.0",
     "test-e2e": "protractor protractor.conf.js",
     "test-jsu": "karma start karma.conf.js",
     "watch": "grunt watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Jgreub/treeline.git"
-  },
-  "author": "Joe Greubel",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Jgreub/treeline/issues"
-  },
-  "homepage": "https://github.com/Jgreub/treeline#readme",
   "dependencies": {
     "angular": "1.6.x",
     "bootstrap-sass": "3.3.x"
@@ -29,7 +15,7 @@
     "grunt": "1.0.x",
     "grunt-contrib-clean": "1.0.x",
     "grunt-contrib-copy": "1.0.x",
-    "grunt-contrib-uglify": "2.1.x",
+    "grunt-contrib-uglify": "2.2.x",
     "grunt-contrib-watch": "1.0.x",
     "grunt-sass": "2.0.x",
     "jasmine-core": "2.5.x",
@@ -40,6 +26,6 @@
     "moment": "2.17.x",
     "phantomjs-prebuilt": "2.1.x",
     "protractor": "5.1.x",
-    "request": "2.79.x"
+    "request": "2.81.x"
   }
 }
