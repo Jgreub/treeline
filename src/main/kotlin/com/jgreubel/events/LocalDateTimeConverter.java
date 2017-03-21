@@ -1,4 +1,4 @@
-package com.jgreubel.databaseconverters;
+package com.jgreubel.events;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
