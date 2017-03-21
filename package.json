@@ -20,7 +20,6 @@
     "grunt-sass": "2.0.x",
     "jasmine-core": "2.5.x",
     "karma": "1.5.x",
-    "karma-chrome-launcher": "2.0.x",
     "karma-jasmine": "1.1.x",
     "karma-phantomjs-launcher": "1.0.x",
     "moment": "2.17.x",

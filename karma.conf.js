@@ -1,6 +1,5 @@
 module.exports = function(config) {
   config.set({
-
     files: [
       'node_modules/angular/angular.min.js',
       'node_modules/angular-mocks/angular-mocks.js',
@@ -16,7 +15,6 @@ module.exports = function(config) {
     browsers: ['PhantomJS'],
 
     plugins: [
-      'karma-chrome-launcher',
       'karma-jasmine',
       'karma-phantomjs-launcher'
     ],
