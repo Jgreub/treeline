@@ -1,7 +1,7 @@
 {
   "scripts": {
     "build": "grunt build",
-    "pretest-e2e": "webdriver-manager update",
+    "pretest-e2e": "webdriver-manager update --versions.chrome=2.27",
     "test-e2e": "protractor protractor.conf.js",
     "test-jsu": "karma start karma.conf.js",
     "watch": "grunt watch"
