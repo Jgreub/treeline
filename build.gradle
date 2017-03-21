@@ -1,28 +1,18 @@
-buildscript {
-	ext {
-		springBootVersion = "1.5.2.RELEASE"
-		kotlinVersion = "1.1.0"
-	}
-
-	repositories {
-		mavenCentral()
-	}
-
-	dependencies {
-		classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
-		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
-	}
+plugins {
+	id "org.jetbrains.kotlin.jvm" version "1.1.1"
+	id "org.springframework.boot" version "1.5.2.RELEASE"
 }
-
-apply plugin: "kotlin"
-apply plugin: "org.springframework.boot"
 
 jar {
 	baseName = "treeline"
 	version = "0.0.1-SNAPSHOT"
 }
 
-// Remove when https://github.com/spring-projects/spring-boot/issues/1176 is resolved
+/*
+ * This allows for the bootRun task to accept normal command line parameters.
+ * The one this project uses is -Dspring.profiles.active=test.
+ * Remove when https://github.com/spring-projects/spring-boot/issues/1176 is resolved.
+ */
 bootRun {
 	systemProperties = System.properties
 }
@@ -39,11 +29,11 @@ dependencies {
 	compile "org.springframework.boot:spring-boot-starter-actuator"
 	compile "org.flywaydb:flyway-core"
 	compile "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
-	compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+	compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:1.1.1"
 
 	runtime "org.springframework.boot:spring-boot-devtools"
 	runtime "org.postgresql:postgresql"
 
 	testCompile "org.springframework.boot:spring-boot-starter-test"
-	testCompile "org.jetbrains.kotlin:kotlin-test:$kotlinVersion"
+	testCompile "org.jetbrains.kotlin:kotlin-test:1.1.1"
 }
