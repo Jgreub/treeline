@@ -11,7 +11,7 @@ var EventsPage = function() {
     }
 
     var addEventDescriptionTextField = function() {
-        return element(by.id('addEventTextField'))
+        return element(by.id('addEventDescriptionTextField'))
     }
 
     var addEventSubmitButton = function() {
