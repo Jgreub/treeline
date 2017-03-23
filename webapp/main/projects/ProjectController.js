@@ -11,6 +11,7 @@ angular.module('events').controller('ProjectController', ['$http', function($htt
         $http.post('/api/events', {description: $ctrl.newEventText}).then(function(response) {
             var newEvent = response.data
             $ctrl.events.push(newEvent)
+            $ctrl.newEventText = '';
         })
     }
 }])

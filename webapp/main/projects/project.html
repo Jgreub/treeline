@@ -1,6 +1,5 @@
 <div class="row">
-    <event class="col-md-6" data-ng-class="{'col-md-offset-6': $index % 2 == 1}" data-ng-repeat="event in $ctrl.events"
-           event="event"></event>
+    <event class="col-md-6" data-ng-class="{'col-md-offset-6': $index % 2 == 1}" data-ng-repeat="event in $ctrl.events" event="event"></event>
 </div>
 <div class="row">
     <form name="addEvent" class="col-md-12" data-ng-submit="$ctrl.addEvent()">
