@@ -12,7 +12,7 @@ module.exports = function (grunt) {
         // ***************** //
 
         WebApp: 'webapp/main',
-        TreelineJsMain: '<%= WebApp %>/Treeline.js',
+        TreelineJsMain: '<%= WebApp %>/treeline.module.js',
         TreelineJs: '<%= WebApp %>/**/*.js',
         TreelineHtmlMain: '<%= WebApp %>/index.html',
         TreelineHtml: '<%= WebApp %>/**/*.html',

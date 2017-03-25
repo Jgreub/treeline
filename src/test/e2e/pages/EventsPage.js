@@ -21,7 +21,7 @@ var EventsPage = function() {
     // *** Properties *** //
 
     var eventCreatedTimeAtIndex = function(index) {
-        return eventAtIndex(index).element(by.css('.created-time')).getText();
+        return eventAtIndex(index).element(by.css('.created-time')).getText()
     }
 
     var eventDescriptionAtIndex = function(index) {
