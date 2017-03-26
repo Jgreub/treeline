@@ -21,6 +21,7 @@
     "jasmine-core": "2.5.x",
     "jasmine-jquery": "2.1.x",
     "karma": "1.5.x",
+    "karma-chrome-launcher": "2.0.x",
     "karma-jasmine": "1.1.x",
     "karma-jasmine-jquery": "0.1.x",
     "karma-ng-html2js-preprocessor": "1.0.x",

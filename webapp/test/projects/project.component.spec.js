@@ -22,7 +22,7 @@ describe('Project Component', function() {
         expect(this.element.find('event:eq(1) .description').text()).toEqual('event-two')
     })
 
-    describe('when adding a new event', function() {
+    describe('adding a new event', function() {
         beforeEach(function() {
             var newEvent = {description: 'new-event-from-server', createdTime: '2014-11-24T11:30:27.443'}
             this.$httpBackend.expectPOST('/api/events', {description: 'new-event'}).respond(200, newEvent)
@@ -43,7 +43,10 @@ describe('Project Component', function() {
 
         it('requires entering a description', function () {
             this.element.find('#addEventDescriptionTextField').val('').trigger('change')
+            this.element.find('#addEventSubmitButton').click()
+
             expect(this.element.find('#addEventDescriptionTextField')).toHaveClass('ng-invalid')
+            this.$httpBackend.verifyNoOutstandingRequest()
         })
     })
 })

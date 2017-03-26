@@ -15,13 +15,14 @@ module.exports = function(config) {
 
     frameworks: ['jasmine-jquery', 'jasmine'],
 
-    browsers: ['PhantomJS'],
+    browsers: ['Chrome'],
 
     plugins: [
+      'karma-chrome-launcher',
       'karma-jasmine',
       'karma-jasmine-jquery',
-      'karma-phantomjs-launcher',
-      'karma-ng-html2js-preprocessor'
+      'karma-ng-html2js-preprocessor',
+      'karma-phantomjs-launcher'
     ],
 
     preprocessors: {
@@ -34,6 +35,6 @@ module.exports = function(config) {
       prependPrefix: 'templates/'
     },
 
-    reporters: ['dots']
+    reporters: ['progress']
   })
 }
