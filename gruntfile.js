@@ -78,6 +78,9 @@ module.exports = function (grunt) {
             }
         },
         watch: {
+            options: {
+                atBegin: true
+            },
             js: {
                 files: ['<%= TreelineJs %>'],
                 tasks: ['uglify:treeline']
