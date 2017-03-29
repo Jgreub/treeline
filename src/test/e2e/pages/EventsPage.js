@@ -11,11 +11,11 @@ var EventsPage = function() {
     }
 
     var addEventDescriptionTextField = function() {
-        return element(by.id('addEventDescriptionTextField'))
+        return element(by.css('input[name="description"]'))
     }
 
     var addEventSubmitButton = function() {
-        return element(by.id('addEventSubmitButton'))
+        return element(by.css('input[name="submit"]'))
     }
 
     // *** Properties *** //

@@ -13,6 +13,8 @@ describe('Project Component', function() {
         this.$httpBackend.expectGET('/api/events').respond(200, {_embedded: {events: existingEvents}})
 
         this.element = $compile('<project></project>')(this.$scope)
+        appendSetFixtures(this.element)
+
         this.$httpBackend.flush()
     }))
 
@@ -27,8 +29,8 @@ describe('Project Component', function() {
             var newEvent = {description: 'new-event-from-server', createdTime: '2014-11-24T11:30:27.443'}
             this.$httpBackend.expectPOST('/api/events', {description: 'new-event'}).respond(200, newEvent)
 
-            this.element.find('#addEventDescriptionTextField').val('new-event').trigger('change')
-            this.element.find('#addEventSubmitButton').click()
+            this.element.find('input[name="description"]').val('new-event').trigger('change')
+            this.element.find('input[name="submit"]').click()
             this.$httpBackend.flush()
         })
 
@@ -38,14 +40,15 @@ describe('Project Component', function() {
         })
 
         it('clears the description input field', function () {
-            expect(this.element.find('#addEventDescriptionTextField').val()).toEqual('')
+            expect(this.element.find('input[name="description"]').val()).toEqual('')
         })
 
         it('requires entering a description', function () {
-            this.element.find('#addEventDescriptionTextField').val('').trigger('change')
-            this.element.find('#addEventSubmitButton').click()
+            this.element.find('input[name="description"]').val('').trigger('change')
+            this.element.find('input[name="submit"]').click()
 
-            expect(this.element.find('#addEventDescriptionTextField')).toHaveClass('ng-invalid')
+            expect(this.element.find('.form-group')).toHaveClass('has-error')
+            expect(this.element.find('.help-block')).toBeVisible()
             this.$httpBackend.verifyNoOutstandingRequest()
         })
     })

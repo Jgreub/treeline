@@ -2,16 +2,19 @@
     <event class="col-md-6" data-ng-class="{'col-md-offset-6': $index % 2 == 1}" data-ng-repeat="event in $ctrl.events" event="event"></event>
 </div>
 <div class="row">
-    <form name="addEvent" class="col-md-12" data-ng-submit="$ctrl.addEvent()">
-        <div class="form-group">
-            <label class="sr-only" for="addEventDescriptionTextField">Event Description</label>
+    <form name="$ctrl.addEventForm" class="col-md-12" data-ng-submit="$ctrl.addEventForm.$valid && $ctrl.addEvent()" novalidate>
+        <div class="form-group" data-ng-class="{ 'has-error': $ctrl.hasError('description') }">
+            <label for="description" class="sr-only">Event Description</label>
             <div class="input-group">
-                <input id="addEventDescriptionTextField" type="text" class="form-control"
-                       data-ng-model="$ctrl.newEventDescription" placeholder="Description..." required/>
+                <input id="description" name="description" type="text" class="form-control" data-ng-model="$ctrl.newEvent.description"
+                       placeholder="Description..." required aria-describedby="descriptionHelp"/>
                 <div class="input-group-btn">
-                    <input id="addEventSubmitButton" type="submit" class="btn btn-primary"/>
+                    <input name="submit" type="submit" class="btn btn-primary"/>
                 </div>
             </div>
+            <span id="descriptionHelp" class="help-block" data-ng-show="$ctrl.hasError('description') && $ctrl.addEventForm.description.$error.required">
+                An event description is required.
+            </span>
         </div>
     </form>
 </div>
