@@ -39,7 +39,8 @@ module.exports = function (grunt) {
                     compress: true
                 },
                 src: [
-                    'node_modules/angular/angular.js'
+                    'node_modules/angular/angular.min.js',
+                    'node_modules/angular-elastic/elastic.js'
                 ],
                 dest: '<%= BuiltDir %>/dependencies.min.js'
             }

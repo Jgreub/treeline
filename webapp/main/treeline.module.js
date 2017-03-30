@@ -1,1 +1,1 @@
-angular.module('treeline', [])
+angular.module('treeline', ['monospaced.elastic'])

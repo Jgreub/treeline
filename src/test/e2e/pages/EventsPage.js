@@ -11,7 +11,7 @@ var EventsPage = function() {
     }
 
     var addEventDescriptionTextField = function() {
-        return element(by.css('input[name="description"]'))
+        return element(by.css('textarea[name="description"]'))
     }
 
     var addEventSubmitButton = function() {

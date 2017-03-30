@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "angular": "1.6.x",
+    "angular-elastic": "2.5.x",
     "bootstrap-sass": "3.3.x"
   },
   "devDependencies": {

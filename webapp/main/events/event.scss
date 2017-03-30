@@ -1,3 +1,7 @@
 event {
     display: block;
+
+    .description {
+        white-space: pre-wrap;
+    }
 }
