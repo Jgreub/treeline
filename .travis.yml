@@ -10,6 +10,12 @@ services:
 addons:
   postgresql: "9.6"
 
+before_install:
+  - java -version
+  - node -v
+  - npm -v
+  - google-chrome --version
+
 install:
   - npm install
 
