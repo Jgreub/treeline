@@ -24,8 +24,8 @@ before_script:
   - sh -e /etc/init.d/xvfb start
   - psql -c 'create database "treeline-test";' -U postgres
   - npm run build
-  - ./gradlew bootRun -Dspring.profiles.active=test &
-  - sleep 190
+  - ./gradlew bootRun -Dspring.profiles.active=test | tee log.txt &
+  - ./scripts/wait_for_log.sh log.txt "Started TreelineApplicationKt"
 
 script:
   - npm run test-jsu
