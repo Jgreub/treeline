@@ -7,7 +7,7 @@ search_text=$2
 
 echo "Searching for \"${search_text}\" in ${logfile}..."
 
-fifo=tmpfifo.$$
+fifo=/tmp/tmpfifo.$$
 mkfifo ${fifo}
 
 tail -f ${logfile} > ${fifo} &
