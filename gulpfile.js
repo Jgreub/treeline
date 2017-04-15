@@ -18,12 +18,12 @@ var builtDir = staticDir + '/built'
 var templateDir = staticDir + '/templates'
 
 var dependenciesJs = [
-   'node_modules/angular/angular.min.js',
-   'node_modules/angular-elastic/elastic.js'
+  'node_modules/angular/angular.min.js',
+  'node_modules/angular-elastic/elastic.js'
 ]
 
 var dependenciesSassPaths = [
-    'node_modules/bootstrap-sass/assets/stylesheets'
+  'node_modules/bootstrap-sass/assets/stylesheets'
 ]
 
 // *************** //
@@ -60,7 +60,12 @@ gulp.task('copy.index', function () {
 })
 
 gulp.task('copy.templates', function () {
-  return gulp.src([treelineTemplates, '!' + webAppDir + '/index.html'])
+  var templatesWithoutIndex = [
+    treelineTemplates,
+    '!' + webAppDir + '/index.html'
+  ]
+
+  return gulp.src(templatesWithoutIndex)
     .pipe(gulp.dest(templateDir))
 })
 
@@ -77,9 +82,9 @@ gulp.task('sass.treeline', function () {
 })
 
 gulp.task('watch', function() {
-  gulp.watch(treelineJs, ['watch.js']);
-  gulp.watch(treelineTemplates, ['watch.templates']);
-  gulp.watch(treelineSass, ['watch.sass']);
+  gulp.watch(treelineJs, ['watch.js'])
+  gulp.watch(treelineTemplates, ['watch.templates'])
+  gulp.watch(treelineSass, ['watch.sass'])
 })
 
 gulp.task('watch.js', function(done) { return sync('uglify.treeline', done) })
@@ -89,4 +94,4 @@ gulp.task('watch.sass', function(done) { return sync('sass.treeline', done) })
 gulp.task('build', function (done) {
   return sync('clean.static', 'uglify.treeline', 'uglify.dependencies',
     'copy.index', 'copy.templates', 'sass.treeline', done)
-});
+})
