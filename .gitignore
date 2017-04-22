@@ -1,9 +1,18 @@
+# Mac OS
 .DS_Store
+
+# Intellij
 .idea
 *.iml
+out
+
+# Gradle
 .gradle
 build
-out
+
+# Node.js
 node_modules
 npm-debug.log
+
+# Generated Files
 src/main/resources/static/
