@@ -1,4 +1,5 @@
 {
+  "private": true,
   "scripts": {
     "build": "gulp build",
     "pretest-e2e": "webdriver-manager update --versions.chrome=2.27",
@@ -18,10 +19,10 @@
     "gulp-concat": "2.6.x",
     "gulp-sass": "3.1.x",
     "gulp-uglify": "2.1.x",
-    "jasmine-core": "2.5.x",
+    "jasmine-core": "2.6.x",
     "jasmine-jquery": "2.1.x",
-    "karma": "1.6.x",
-    "karma-chrome-launcher": "2.0.x",
+    "karma": "1.7.x",
+    "karma-chrome-launcher": "2.1.x",
     "karma-jasmine": "1.1.x",
     "karma-jasmine-jquery": "0.1.x",
     "karma-ng-html2js-preprocessor": "1.0.x",
