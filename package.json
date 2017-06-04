@@ -18,7 +18,7 @@
     "gulp-clean": "0.3.x",
     "gulp-concat": "2.6.x",
     "gulp-sass": "3.1.x",
-    "gulp-uglify": "2.1.x",
+    "gulp-uglify": "3.0.x",
     "jasmine-core": "2.6.x",
     "jasmine-jquery": "2.1.x",
     "karma": "1.7.x",
