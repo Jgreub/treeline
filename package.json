@@ -19,7 +19,7 @@
     "gulp-concat": "2.6.x",
     "gulp-sass": "3.1.x",
     "gulp-uglify": "3.0.x",
-    "jasmine-core": "2.6.x",
+    "jasmine-core": "2.8.x",
     "jasmine-jquery": "2.1.x",
     "karma": "1.7.x",
     "karma-chrome-launcher": "2.2.x",
@@ -31,6 +31,6 @@
     "phantomjs-prebuilt": "2.1.x",
     "protractor": "5.1.x",
     "request": "2.81.x",
-    "run-sequence": "2.0.x"
+    "run-sequence": "2.1.x"
   }
 }

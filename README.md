@@ -6,7 +6,7 @@ An application that allows for the tracking of events relative to a project in a
 
 * Java *(jdk8)*
 * Postgres Database *(v9.6)*
-* NodeJS *(v8.1)*
+* NodeJS *(v8.4)*
 * Node Package Manager *(v5.0)*
 * Google Chrome *(v59.0)*
 
